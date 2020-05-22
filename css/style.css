@@ -62,7 +62,7 @@ img {
 }
 a {
   text-decoration: none;
-  display: block;
+  display: inline-block;
 }
 .visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,
@@ -101,7 +101,6 @@ input[type='radio'].visually-hidden {
   width: 94px;
   height: 40px;
   background: none;
-  margin-bottom: 118px;
   cursor: pointer;
 }
 .login:first-child {
@@ -145,7 +144,6 @@ input[type='radio'].visually-hidden {
   font-weight: bold;
   color: #fff;
   background-color: var(--main-color);
-  display: inline-block;
   border-radius: 20px;
   border: solid 2px var(--main-color);
   width: 280px;
@@ -178,20 +176,6 @@ input[type='radio'].visually-hidden {
 .partner__list-card {
   width: 220px;
   padding: 10px 0;
-}
-@media (max-width: 767px) {
-  .partner__list-card:first-child {
-    order: -2;
-  }
-  .partner__list-card:nth-child(3) {
-    order: -1;
-  }
-  .partner__list-card:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  .partner__list-card {
-    margin: 0 auto;
-  }
 }
 .partner__list-card-img-wrapper {
   width: 122px; 
@@ -261,6 +245,23 @@ input[type='radio'].visually-hidden {
   background-color: var(--main-color);
 }
 
+@media (max-width: 767px) {
+  .btn-wrapper {
+    margin-bottom: 118px;
+  }
+  .partner__list-card:first-child {
+    order: -2;
+  }
+  .partner__list-card:nth-child(3) {
+    order: -1;
+  }
+  .partner__list-card:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .partner__list-card {
+    margin: 0 auto;
+  }
+}
 @media (min-width: 768px) {
   .header {
     background-image: url(../img/bg-img-768.png);
@@ -274,12 +275,8 @@ input[type='radio'].visually-hidden {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    height: 40px;
     align-items: center;
     margin-bottom: 150px;
-  }
-  .login {
-    margin-bottom: 0;
   }
   .header__title {
     font-size: 52px;
@@ -314,7 +311,6 @@ input[type='radio'].visually-hidden {
     margin-bottom: 50px;
   }
 }
-
 @media (min-width: 960px) {
   .header {
     background-image: url(../img/bg-img-1440.png);
